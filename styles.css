@@ -326,6 +326,7 @@ section {
   font-size: 1.1em;
   text-align: justify;
   margin-bottom: 25px;
+  color: #2c3e50;
 }
 /* Los colores del párrafo y del h3 permanecen fijos (sin override en dark mode) */
 .about-text h3 {
