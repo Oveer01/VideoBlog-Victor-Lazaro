@@ -1,0 +1,9 @@
+{
+    "name": "Víctor Lázaro García - Videoblog",
+    "short_name": "Videoblog",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#3498db"
+  }
+  

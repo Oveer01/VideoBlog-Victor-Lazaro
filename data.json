@@ -1,0 +1,18 @@
+{
+    "portfolio": [],
+    "testimonials": [],
+    "studies": [
+        {
+            "image": "images/estudio1.png",
+            "title": "Diplomatura en la escuela TAI de artes escénicas",
+            "description": "Escuela TAI de Artes Escénicas, 2018-2020"
+        }
+    ],
+    "contact": {
+        "tiktok": "https://www.tiktok.com/@vitiflyss?_t=ZN-8t64czaK0RC&_r=1",
+        "whatsapp": "https://api.whatsapp.com/send?phone=34648410541",
+        "phone": "+34 648 41 05 41",
+        "email": "victorlg082001@gmail.com",
+        "instagram": "https://www.instagram.com/vitiiflays_?igsh=MXd4ZmIwajNkOXc3dQ%3D%3D&utm_source=qr"
+    }
+}

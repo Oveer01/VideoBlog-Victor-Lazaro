@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Víctor Lázaro García - Videoblog</title>
+  <meta name="description" content="Videoblog de Víctor Lázaro García, profesional de las artes escénicas. Descubre sus proyectos y colabora con él.">
+  <meta name="keywords" content="Víctor Lázaro, videoblog, artes escénicas, cineasta, cortometrajes, documentales">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Víctor Lázaro García - Videoblog">
+  <meta property="og:description" content="Descubre los proyectos de Víctor Lázaro García, profesional de las artes escénicas.">
+  <meta property="og:image" content="images/og-image.jpg">
+  <meta property="og:url" content="https://tusitio.com">
+  <meta property="og:type" content="website">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Swiper CSS (se mantiene aunque para testimonios ahora se usa una lista) -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Barra de progreso -->
+  <div id="scroll-progress"></div>
+
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <div class="logo">
+        <a href="#home">Víctor Lázaro</a>
+      </div>
+      <nav aria-label="Navegación principal">
+        <ul id="nav-links">
+          <li><a href="#about" class="nav-link">¿Quién es?</a></li>
+          <li><a href="#portfolio" class="nav-link">Portafolio</a></li>
+          <li><a href="#videoblog" class="nav-link">Videoblog</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonios</a></li>
+          <li><a href="#contact" class="nav-link">Contáctame</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button id="dark-mode-toggle" aria-label="Alternar Modo Oscuro">
+            <i class="fas fa-moon"></i>
+          </button>
+          <div class="hamburger" id="hamburger" aria-label="Menú de navegación">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección ¿Quién es? -->
+  <section id="about" data-aos="fade-up">
+    <div class="container">
+      <h2>¿Quién es Víctor?</h2>
+      <div class="about-content">
+        <img src="images/victor.jpg" alt="Víctor Lázaro García" class="profile-img" loading="lazy" data-aos="zoom-in" data-aos-delay="100">
+        <div class="about-text">
+          <p>
+            Víctor Lázaro García es un apasionado profesional de las artes escénicas de <span id="edad">...</span> años. Aunque aún no ha tenido la oportunidad de brillar en grandes escenarios, su talento y creatividad prometen revolucionar el mundo del espectáculo.
+          </p>
+          <h3>Estudios</h3>
+          <!-- Contenedor para estudios (cargado desde data.json) -->
+          <div class="studies-container"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Portafolio -->
+  <section id="portfolio" data-aos="fade-up">
+    <div class="container">
+      <h2>Portafolio</h2>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="cortometraje">Cortometraje</button>
+        <button class="filter-btn" data-filter="documental">Documental</button>
+      </div>
+      <!-- Contenedor para portafolio -->
+      <div class="portfolio-items"></div>
+    </div>
+  </section>
+
+  <!-- Sección Videoblog -->
+  <section id="videoblog" data-aos="fade-up">
+    <div class="container">
+      <h2>Videoblog</h2>
+      <div class="videoblog-content">
+        <video controls muted preload="auto" playsinline>
+          <source src="videos/Valencia GALA 2.mp4" type="video/mp4">
+          Tu navegador no soporta el elemento de video.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Testimonios (Lista) -->
+  <section id="testimonials" data-aos="fade-up">
+    <div class="container">
+      <h2>Testimonios</h2>
+      <!-- Contenedor para testimonios como lista -->
+      <div class="testimonials-list"></div>
+    </div>
+  </section>
+
+  <!-- Sección Contáctame -->
+  <section id="contact" data-aos="fade-up">
+    <div class="container">
+      <h2>Contáctame</h2>
+      <!-- Contenedor para datos de contacto (cargado desde data.json) -->
+      <div class="contact-container"></div>
+    </div>
+  </section>
+
+  <!-- Sin espacio extra, pegado al footer -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year">2024</span> Víctor Lázaro García. Todos los derechos reservados.</p>
+      <div class="social-links">
+        <a href="https://www.youtube.com/tu-canal" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/tu-cuenta" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/tu-cuenta" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back-to-Top Button -->
+  <button id="back-to-top" aria-label="Volver al inicio">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <!-- Librerías externas -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').then(registration => {
+          console.log('Service Worker registrado con éxito:', registration.scope);
+        }, err => {
+          console.log('Error al registrar el Service Worker:', err);
+        });
+      });
+    }
+  </script>
+  <!-- Main Script -->
+  <script src="scripts.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true, easing: 'ease-in-out' });
+  </script>
+</body>
+</html>
